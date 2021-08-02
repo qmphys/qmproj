@@ -1,0 +1,82 @@
+\usepackage{amsfonts,amssymb,amsbsy}%
+\usepackage[many]{tcolorbox}%可以换行的colorbox,many选项含自动加载amsmath
+\tcbuselibrary{vignette}%tcolorbox的many选项没有加载这个库
+\usepackage{mathrsfs,mathtools}
+\usepackage{bm}%数学字体加粗
+\usepackage{braket}%狄拉克括号
+\usepackage{tabularx}%增强表格
+\usepackage{multirow}%跨行表格
+\usepackage{longtable}%可跨页长表格
+\usepackage[version=4]{mhchem}%输入元素符号，文本、数学环境皆可
+\usepackage{graphicx}
+\usepackage{enumitem}%个性化enumerate
+\usepackage{xcolor}%可以使用颜色名xcolor
+\usepackage{advdate}% "\AdvYear{-2}\the\year"在真实年减去２年
+\usepackage{listings}%编程代码显示
+\usepackage[left=2.4cm,right=2.4cm,top=2.5cm,bottom=2.5cm]{geometry}%定义页边距
+\usepackage{extarrows}%可输入增长的数学箭头
+%%%
+\usepackage{fancyhdr}%页面设置定制
+\pagestyle{fancy}
+\fancyhf{}%普通样式
+\fancyhead[CO]{西南科技大学课带项目报告}
+\fancyhead[CE]{\mytitle}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{.5pt}%页眉的横线宽度
+%双线页眉的设置 
+\makeatletter %双线页眉
+\def\headrule{{\if@fancyplain\let\headrulewidth\plainheadrulewidth\fi% 
+		\hrule\@height 0.6pt \@width\headwidth\vskip1pt%上面线为1pt粗   
+		\hrule\@height 1.0pt\@width\headwidth  %下面0.5pt粗         
+		\vskip-2\headrulewidth\vskip-1.5pt}      % 两条线的距离1pt
+	\vspace{6mm}}     %双线与下面正文之间的垂直间距           
+\makeatother
+%%%
+\usepackage[numbered]{bookmark}%自定义书签，例如把“目录”列入书签
+%\usepackage{newtxtext,newtxmath}%正文与数字均罗马字体，特殊符号仍然好看
+\usepackage{newtxtext}%正文罗马字体，不影响数学环境字体
+\setCJKmainfont[BoldFont=SimHei,ItalicFont=KaiTi]{SimSun}
+%%%
+\usepackage{hyperref}%文本超链接
+\hypersetup{
+  colorlinks = true,   % Colours links instead of ugly boxes
+  urlcolor   = blue,   % Colour for external hyperlinks
+  linkcolor  = blue, % Colour of internal links
+  citecolor  = red   % Colour of citations 注意最后一行没有,号
+}
+%%%
+\graphicspath{{grafig/}}%%须配合上面的graphicx宏包使用
+%%%定义下划线
+\makeatletter
+\newcommand\swustunderline[2][4cm]{\hskip1pt\underline{\hb@xt@#1{\hss#2\hss}}\hskip3pt}
+\makeatother
+%%%
+\newcommand{\alert}[1]{\textcolor{blue}{#1}}%定义\alert{}变蓝不加粗
+%%%%
+%%%%
+\newcommand{\thecourse}{量子力学}%名称%LX190620
+\newcommand{\thephase}{课带}%构思、设计、实施
+\newcommand{\mythesis}{•}%本组项目名称
+%\newcommand{\mythesiss}{}%长题目分成2段
+\newcommand{\gnumber}{第•组}%组号，用中文数字
+\newcommand{\charger}{•}%组长名
+\newcommand{\members}{•}%组员，以~分开
+\newcommand{\myschool}{理学院}%
+\newcommand{\mymajor}{光电信息科学与工程系}%
+\newcommand{\supervisor}{黎雷}%指导教师
+\newcommand{\mytitle}{\mythesis}%页眉内容%\mythesiss
+\newcommand{\thisgrade}{\AdvYear{-1}\the\year}
+\newcommand{\numbtt}{51\thisgrade}
+\newcommand{\thecredit}{\numbtt•}%组长学号
+%%%
+%%tex.stackexchange.com/questions/458168/how-to-get-the-last-two-digits-of-next-year
+\newcommand{\lasttwoyear}[1]{% #1 is the offset
+  \expandafter\getlasttwo\number\numexpr\year+(#1)\relax\relax
+}
+\def\getlasttwo#1#2#3#4\relax{#3#4}
+%%自定义的\lasttwoyear{}命令，{}里面可填参数-2，-1，+1等，只提取年份后两位
+%%
+\newcommand{\classgx}{光信\lasttwoyear{-1}}%理学院光信XX级简写
+%%%
+%%%%
+%%%%

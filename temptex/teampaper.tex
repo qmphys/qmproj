@@ -1,0 +1,30 @@
+\documentclass[a4paper,UTF8,oneside,fontset = none]{ctexbook}%
+\input{subfiles/paperhead.tex}
+%%%%%%
+\begin{document}
+\frontmatter%正文前页码用小写罗马数字
+%\include{subfiles/fmcover}
+\include{subfiles/fmtitlepage}
+\pagestyle{fancy}
+\setcounter{page}{1}%页码从摘要开始重新编号
+\include{subfiles/abstract}%摘要
+\addcontentsline{toc}{chapter}{摘要}%摘要页码放到目录页
+\tableofcontents%目录
+%%
+\mainmatter%正文开始，页码阿拉伯数字
+\include{subfiles/ch01}
+%\include{subfiles/ch02}
+%\include{subfiles/ch03}
+%\include{subfiles/ch04}
+%%
+\backmatter%
+\include{subfiles/conclusion}
+%\bibliography{subfiles/standard}% 
+%\addcontentsline{toc}{chapter}{参考文献}%参考文献页码加入目录
+%\appendix %开始附录
+%% 表格索引
+%  \listoftables
+%% 插图索引
+%  \listoffigures
+\end{document}
+%%
