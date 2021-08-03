@@ -1,14 +1,18 @@
 \documentclass[a4paper,UTF8,oneside,fontset = none]{ctexbook}%
 \input{subfiles/paperhead.tex}
+\input{subfiles/infos.tex}
+%%
+% 上面两个文件是导言区的，须用input
+%%
 %%%%%%
 \begin{document}
 \frontmatter%正文前页码用小写罗马数字
-%\include{subfiles/fmcover}
-\include{subfiles/fmtitlepage}
+\include{subfiles/fmcover}
+\include{subfiles/fmscores}
 \pagestyle{fancy}
 \setcounter{page}{1}%页码从摘要开始重新编号
 \include{subfiles/abstract}%摘要
-\addcontentsline{toc}{chapter}{摘要}%摘要页码放到目录页
+\addcontentsline{toc}{chapter}{摘\quad 要}%摘要页码放到目录页
 \tableofcontents%目录
 %%
 \mainmatter%正文开始，页码阿拉伯数字

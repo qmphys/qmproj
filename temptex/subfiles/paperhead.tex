@@ -45,29 +45,21 @@
   citecolor  = red   % Colour of citations 注意最后一行没有,号
 }
 %%%
+%\usepackage{makebox}%用makebox*命令取代原makebox，每多大区别可不用
+\usepackage{caption}
+\captionsetup{labelsep=space}
+%\captionsetup[figure]{labelsep=space}[table]
+\captionsetup{font={small,bf} }
+%%%
 \graphicspath{{grafig/}}%%须配合上面的graphicx宏包使用
+%%%%
+\ctexset{contentsname={\zihao{-2} \textbf{目\quad 录}}}
 %%%定义下划线
 \makeatletter
 \newcommand\swustunderline[2][4cm]{\hskip1pt\underline{\hb@xt@#1{\hss#2\hss}}\hskip3pt}
 \makeatother
 %%%
 \newcommand{\alert}[1]{\textcolor{blue}{#1}}%定义\alert{}变蓝不加粗
-%%%%
-%%%%
-\newcommand{\thecourse}{量子力学}%名称%LX190620
-\newcommand{\thephase}{课带}%构思、设计、实施
-\newcommand{\mythesis}{•}%本组项目名称
-%\newcommand{\mythesiss}{}%长题目分成2段
-\newcommand{\gnumber}{第•组}%组号，用中文数字
-\newcommand{\charger}{•}%组长名
-\newcommand{\members}{•}%组员，以~分开
-\newcommand{\myschool}{理学院}%
-\newcommand{\mymajor}{光电信息科学与工程系}%
-\newcommand{\supervisor}{黎雷}%指导教师
-\newcommand{\mytitle}{\mythesis}%页眉内容%\mythesiss
-\newcommand{\thisgrade}{\AdvYear{-1}\the\year}
-\newcommand{\numbtt}{51\thisgrade}
-\newcommand{\thecredit}{\numbtt•}%组长学号
 %%%
 %%tex.stackexchange.com/questions/458168/how-to-get-the-last-two-digits-of-next-year
 \newcommand{\lasttwoyear}[1]{% #1 is the offset
@@ -76,7 +68,4 @@
 \def\getlasttwo#1#2#3#4\relax{#3#4}
 %%自定义的\lasttwoyear{}命令，{}里面可填参数-2，-1，+1等，只提取年份后两位
 %%
-\newcommand{\classgx}{光信\lasttwoyear{-1}}%理学院光信XX级简写
-%%%
-%%%%
 %%%%
