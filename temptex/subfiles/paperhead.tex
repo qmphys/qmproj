@@ -19,9 +19,14 @@
 \usepackage{fancyhdr}%页面设置定制
 \pagestyle{fancy}
 \fancyhf{}%普通样式
-\fancyhead[CO]{西南科技大学课带项目报告}
-\fancyhead[CE]{\mytitle}
+\fancyhead[L]{西南科技大学课带项目报告}
+\fancyhead[R]{\mytitle}
 \fancyfoot[C]{\thepage}
+%% 下面这段解决章的开头不显示页眉，https://blog.csdn.net/songyuc/article/details/80197006
+\fancypagestyle{plain}{
+  \pagestyle{fancy}
+}
+%%
 \renewcommand{\headrulewidth}{.5pt}%页眉的横线宽度
 %双线页眉的设置 
 \makeatletter %双线页眉
@@ -34,8 +39,9 @@
 %%%
 \usepackage[numbered]{bookmark}%自定义书签，例如把“目录”列入书签
 %\usepackage{newtxtext,newtxmath}%正文与数字均罗马字体，特殊符号仍然好看
-\usepackage{newtxtext}%正文罗马字体，不影响数学环境字体
-\setCJKmainfont[BoldFont=SimHei,ItalicFont=KaiTi]{SimSun}
+\usepackage{newtxtext}%正文英文罗马字体，不影响数学环境字体
+%\setCJKmainfont[BoldFont=SimHei,ItalicFont=KaiTi]{SimSun}%ctex1.0的旧命令
+%\ctexset{fontset=adobe}%也可以直接放到documentclass的参数，ctex2.0的命令
 %%%
 \usepackage{hyperref}%文本超链接
 \hypersetup{
@@ -53,7 +59,7 @@
 %%%
 \graphicspath{{grafig/}}%%须配合上面的graphicx宏包使用
 %%%%
-\ctexset{contentsname={\zihao{-2} \textbf{目\quad 录}}}
+\ctexset{contentsname={\bfseries\zihao{-2} 目\quad 录}}
 %%%定义下划线
 \makeatletter
 \newcommand\swustunderline[2][4cm]{\hskip1pt\underline{\hb@xt@#1{\hss#2\hss}}\hskip3pt}
