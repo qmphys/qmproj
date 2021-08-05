@@ -2,7 +2,7 @@
 \input{subfiles/paperhead.tex}
 \input{subfiles/infos.tex}
 %%
-% 上面两个文件是导言区的，须用input
+% 上面两个文件是导言区的，须用input。include的内容会新起一页
 %%
 %%%%%%
 \begin{document}
@@ -24,8 +24,9 @@
 %%
 \backmatter%
 \include{subfiles/conclusion}
-%\bibliography{subfiles/standard}% 
-%\addcontentsline{toc}{chapter}{参考文献}%参考文献页码加入目录
+%% 直接编辑同目录下 teampaper.bbl 文件加入参考文献
+\bibliography{}
+\addcontentsline{toc}{chapter}{参考文献}%参考文献页码加入目录
 %\appendix %开始附录
 %% 表格索引
 %  \listoftables
