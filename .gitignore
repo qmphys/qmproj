@@ -21,5 +21,7 @@
 *.tmp
 *.mtc
 *.mtc0
+*.xml
+*.bcf
 # 文件夹
 .gitee/

@@ -1,3 +1,47 @@
-%% ElegantBook Template
+%!TEX program = xelatex
 \documentclass[cn]{elegantbook}
 \input{elsub/elhead.tex}
+\input{elsub/myinfo.tex}
+%%%%
+\begin{document}
+% 
+%\maketitle
+% 目录前的内容
+\frontmatter
+%
+\pagestyle{empty}
+\include{elsub/mycover}
+\include{elsub/myscore}
+%
+\pagestyle{fancy}
+\setcounter{page}{1}%页码从摘要开始重新编号
+\chapter*{摘要}
+
+\markboth{Introduction}{前言}
+
+论文主要在。。。做了
+
+% 加入目录页
+\addcontentsline{toc}{chapter}{摘要}  %摘要页码也放到目录页
+\tableofcontents
+% 下面正文开始
+\mainmatter
+%%
+\chapter{绪论}
+
+\section{第一节}
+
+%%
+\chapter{背景}
+
+\section{数学环境简介}
+
+%%
+\backmatter
+%%
+%\include{elsub/conclusion}
+%% 直接编辑同目录下 elteam.bbl 文件加入参考文献
+\bibliography{}
+\addcontentsline{toc}{chapter}{参考文献} % 参考文献页码加入目录
+%%%
+\end{document}

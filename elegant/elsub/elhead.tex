@@ -3,6 +3,7 @@
 \usepackage{tabularx}%增强表格
 \usepackage{longtable}%可跨页长表格
 \usepackage{advdate}% "\AdvYear{-2}\the\year"在真实年减去２年
+\usepackage[version=4]{mhchem}%输入元素符号，文本、数学环境皆可
 %%
 \tcbset{
     prcommon/.style={
@@ -51,3 +52,16 @@
         \node[anchor=south east, outer sep=0pt] at (\linewidth-width,0) {
           \textcolor{third}{$\clubsuit$}};}},}
 %%
+%% 定义下划线
+\makeatletter
+\newcommand\swustunderline[2][4cm]{\hskip1pt\underline{\hb@xt@#1{\hss#2\hss}}\hskip3pt}
+\makeatother
+%%
+%% 自定义\lasttwoyear{}命令，{}里面可填参数-2，-1，+1等，只提取年份后两位
+\newcommand{\lasttwoyear}[1]{% #1 is the offset
+  \expandafter\getlasttwo\number\numexpr\year+(#1)\relax\relax
+}
+\def\getlasttwo#1#2#3#4\relax{#3#4}
+%%
+\graphicspath{{figs/}}
+\bibliographystyle{unsrt}%参考文献格式
