@@ -1,9 +1,53 @@
-\usepackage{amsfonts,amssymb,amsbsy}%
-\usepackage{mathrsfs,mathtools}
-\usepackage{bm}%数学字体加粗
+\usepackage{mathtools}
 \usepackage{braket}%狄拉克括号
 \usepackage{tabularx}%增强表格
-\usepackage{multirow}%跨行表格
 \usepackage{longtable}%可跨页长表格
 \usepackage{advdate}% "\AdvYear{-2}\the\year"在真实年减去２年
-\usepackage{listings}%编程代码显示
+%%
+\tcbset{
+    prcommon/.style={
+      fontupper=\citshape,
+      lower separated=false,
+      % before upper={\setlength{\parindent}{\normalparindent}},
+      coltitle=white,
+      colback=gray!5,
+      boxrule=0.5pt,
+      fonttitle=\bfseries,
+      enhanced,
+      breakable,
+      top=8pt,
+      before skip=8pt,
+      attach boxed title to top left={
+        yshift=-0.11in,
+        xshift=0.15in},
+      boxed title style={
+        boxrule=0pt,
+        colframe=white,
+        arc=0pt,
+        outer arc=0pt},
+      separator sign={},},
+    prdefstyle/.style={
+      prcommon,
+      colframe=main,  
+      colback=main!5,
+      colbacktitle=main, 
+      overlay unbroken and last={
+        \node[anchor=south east, outer sep=0pt] at (\linewidth-width,0) {
+          \textcolor{main}{$\spadesuit$}};}},
+    prthmstyle/.style={
+      prcommon,
+      colframe=second,  
+      colback=second!5,
+      colbacktitle=second, 
+      overlay unbroken and last={
+        \node[anchor=south east, outer sep=0pt] at (\linewidth-width,0) {
+          \textcolor{second}{$\heartsuit$}};}},
+    prpropstyle/.style={
+      prcommon,
+      colframe=third,  
+      colback=third!5,
+      colbacktitle=third, 
+      overlay unbroken and last={
+        \node[anchor=south east, outer sep=0pt] at (\linewidth-width,0) {
+          \textcolor{third}{$\clubsuit$}};}},}
+%%
