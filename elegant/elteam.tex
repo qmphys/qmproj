@@ -18,28 +18,26 @@
 \chapter*{摘要}
 
 \markboth{Introduction}{前言}
+%% 下面填写摘要内容
 
 论文主要在。。。做了
 
+%% 摘要结束
 % 加入目录页
 \addcontentsline{toc}{chapter}{摘要}  %摘要页码也放到目录页
 \tableofcontents
 % 下面正文开始
 \mainmatter
 %%
-\chapter{绪论}
-
-\section{第一节}
-
-%%
-\chapter{背景}
-
-\section{数学环境简介}
-
+% 加入绪论（第一章）
+\include{elsub/ch01}
+% 加入第二章
+\include{elsub/ch02}
 %%
 \backmatter
 %%
-%\include{elsub/conclusion}
+% 加入结论
+\include{elsub/conclusion}
 %% 直接编辑同目录下 elteam.bbl 文件加入参考文献
 \bibliography{}
 \addcontentsline{toc}{chapter}{参考文献} % 参考文献页码加入目录
