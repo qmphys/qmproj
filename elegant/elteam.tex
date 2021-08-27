@@ -1,7 +1,7 @@
 %!TEX program = xelatex
 \documentclass[cn]{elegantbook}
-\input{elsub/elhead.tex}
-\input{elsub/myinfo.tex}
+\input{elsub/elhead.tex}%此文件不改动
+\input{elsub/myinfo.tex}%组长填写 • 符号标记的位置
 %%%%
 \begin{document}
 % 
@@ -10,21 +10,26 @@
 \frontmatter
 %
 \pagestyle{empty}
-\include{elsub/mycover}
-\include{elsub/myscore}
 %
-\pagestyle{fancy}
+\pdfbookmark[0]{封面}{cov}%加入书签，但不加入“目录”
+\include{elsub/mycover}%填好myinfo.tex文件后，自动生成
+%
+\pdfbookmark[0]{信息表}{sco}%加入书签，但不加入“目录”
+\include{elsub/myscore}%组长和教师填写
+%
+\pagestyle{fancy}%
 \setcounter{page}{1}%页码从摘要开始重新编号
-\chapter*{摘要}
-
-\markboth{Introduction}{前言}
+\chapter*{摘要}%
+\addcontentsline{toc}{chapter}{摘要}  %摘要页码也放到目录页
+\markboth{Introduction}{摘要}%
 %% 下面填写摘要内容
 
 论文主要在。。。做了
 
+
 %% 摘要结束
-% 加入目录页
-\addcontentsline{toc}{chapter}{摘要}  %摘要页码也放到目录页
+\clearpage{}%须加上，使目录可正确hyperref
+\pdfbookmark[0]{目录}{abk0}%目录放入书签（不是“目录”）
 \tableofcontents
 % 下面正文开始
 \mainmatter
