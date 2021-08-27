@@ -13,27 +13,27 @@
 ## 安装教程
 
 1.  Win10系统推荐安装MikTex
-2.  MacOS推荐Texlive
-3.  Linux推荐Texlive
+1.  MacOS推荐Texlive
+1.  Linux推荐Texlive
 
 ## 使用说明
 
 1.  把Code下的内容Fork到自己的账号
-2.  如果用elegant模板：
-        - 修改elegantbook_cls文件名elegantbook.cls
-        - 访问 https://ctan.org/pkg/elegantbook 获取更多细节
-3.  更新小组信息
-4.  按章节填写文章
-5.  公式参考模板中的手册，或者
-        - Mathpix Snip：https://mathpix.com/
-        - Image2LaTeX：https://gitee.com/Goldenworthy/img2latex-mathpix
-        - Image2LaTeX：https://github.com/kingyiusuen/image-to-latex
+1.  如果用elegant模板：
+    - 修改elegantbook_cls文件名elegantbook.cls
+    - 访问 https://ctan.org/pkg/elegantbook 获取更多细节
+1.  更新小组信息
+1.  按章节填写文章
+1.  公式参考模板中的手册，或者
+    - Mathpix Snip：https://mathpix.com/
+    - Image2LaTeX：https://gitee.com/Goldenworthy/img2latex-mathpix
+    - Image2LaTeX：https://github.com/kingyiusuen/image-to-latex
 
 ## 参与贡献
 
 1.  Fork 本仓库
-2.  新建 team_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
+1.  新建 team_xxx 分支
+1.  提交代码
+1.  新建 Pull Request
 
 
