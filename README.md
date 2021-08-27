@@ -2,9 +2,9 @@
 ## 量子力学或原子物理与量子力学课带项目.tex模板
 ### 提供两套模板，推荐elegant文件夹下的模板
 ### 更多细节参考（二选一）
-    - elegant文件夹下的：readme.md
-    - temptex文件夹下的：写作说明.md
-### elegant模板采用ElegantBook样式，具体用法见下面的“使用说明”
+- elegant文件夹下的：readme.md
+- temptex文件夹下的：写作说明.md
+### elegant模板基于ElegantBook样式，具体用法见下面的“使用说明”
 
 ## 软件架构
 .tex文件
@@ -20,7 +20,7 @@
 
 1.  把Code下的内容Fork到自己的账号
 1.  如果用elegant模板：
-    - 修改elegantbook_cls文件名elegantbook.cls
+    - 修改elegantbook_cls文件名为：elegantbook.cls
     - 访问 https://ctan.org/pkg/elegantbook 获取更多细节
 1.  更新小组信息
 1.  按章节填写文章
