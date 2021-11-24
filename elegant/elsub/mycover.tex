@@ -48,8 +48,9 @@
 \vspace{1.5cm}
 %\CTEXoptions[today=big] \today
 
-\CTEXdigits{\mydatey}{\the\year } 
-\CTEXdigits{\mydatem}{\the\month }  \normalsize{\mydatey 年\mydatem 月}
+\CTEXdigits{\mydatey}{\the\year } % 把年的数字转成中文
+\normalsize{\mydatey 年 \CJKnumber\month 月}
+% \CJKnumber\month 显示中文的月，需要 CJKnumb 宏包
 \end{center}
 
 \clearpage
